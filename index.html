@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>WinGo AI Predictor</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+<div id="app">
+
+    <!-- Screen 1: WinGo Time Selection -->
+    <div id="screen1" class="screen active">
+        <h1>WinGo AI Predictor</h1>
+        <div class="card">
+            <label>Select WinGo Time</label>
+            <select id="time-select">
+                <option value="">Choose WinGo Game...</option>
+                <option value="30">WinGo 30 Sec</option>
+                <option value="60">WinGo 1 Min</option>
+                <option value="180">WinGo 3 Min</option>
+                <option value="300">WinGo 5 Min</option>
+            </select>
+        </div>
+        <button id="start-btn" class="big-btn">Continue →</button>
+    </div>
+
+    <!-- Screen 2: Signal -->
+    <div id="screen2" class="screen">
+        <div class="card">
+            <div class="signal-row">
+                <span>Game:</span>
+                <strong id="game-name">-</strong>
+            </div>
+            <div class="signal-row">
+                <span>Period:</span>
+                <strong id="period-number">-</strong>
+            </div>
+        </div>
+
+        <button id="get-signal" class="big-btn signal-btn">GET AI SIGNAL</button>
+
+        <div id="processing" class="processing-container">
+            <div class="step" id="step1">Analyzing WinGo Pattern...</div>
+            <div class="step" id="step2">Reading Market Trend...</div>
+            <div class="step" id="step3">AI Probability Calculation...</div>
+            <div class="step" id="step4">Final Signal Generating...</div>
+        </div>
+
+        <div id="signal-card" class="signal-card">
+            <div class="signal-header">WinGo Prediction</div>
+            <div class="signal-row">
+                <span>Game:</span>
+                <strong id="final-game"></strong>
+            </div>
+            <div class="signal-row">
+                <span>Period:</span>
+                <strong id="final-period"></strong>
+            </div>
+            <div class="signal-row direction">
+                <span>Result:</span>
+                <strong id="signal-direction"></strong>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
